@@ -4,6 +4,11 @@ local keymap = vim.keymap
 
 ----------------------- General Keymaps -------------------
 
+-- Disable 'q' key in normal mode
+--keymap.set('n', 'q', '<Nop>', { noremap = true, silent = true })
+-- Remap 'q' key to clear search highlights and cancel the search
+keymap.set('n', 'q', ':let @/=""<CR>:nohlsearch<CR>', { noremap = true, silent = true })
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
@@ -28,3 +33,8 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- buffer management
+keymap.set("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Next buffer" })
+keymap.set("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+keymap.set("n", "<leader>bt", "<C-^>", { desc = "Toggle last buffer" })
