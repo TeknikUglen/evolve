@@ -1,5 +1,8 @@
 # Evolve
 
+> [!Warning]
+> Moved to codeberg [https://codeberg.org/TeknikUglen/evolve](https://codeberg.org/TeknikUglen/evolve)
+
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/isc)
 
 My basic Neovim setup based heavily on info found in a You Tube video.
